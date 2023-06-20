@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+body{
+    background-color: bisque;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+nav{
+    background-color: black;
+    color: rgb(212, 226, 149);
+    height: 50px;
+    padding: 0px 12px;
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    font-family: 'Kablammo', cursive;
+    font-size: 30px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    /* background-color: rgb(37, 37, 37); */
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Merriweather', serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(138, 136, 136);
+}
+.info{
+    font-size: 22px;
+}
+.gameInfo{
+    padding: 0% 34px;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt{
+    border-top: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 20px;
+    padding: 10;
+    background-color: rgb(212, 226, 149);
+    border-radius: 10%;
+    cursor: pointer;
+}
+/* .line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: bisque;
+    transition: width 1s ease-in-out;
+} */
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
